@@ -1,0 +1,190 @@
+{
+  "name": "3-Day Muscle Gain Plan (No Barbell)",
+  "description": "A 3-day hypertrophy-focused plan using all gym equipment except barbell exercises. 5 exercises per day, targeting chest/back/legs/shoulders with a mix of dumbbell, cable, and machine movements. Rest times are set to optimize muscle growth. Progression: every 4-6 weeks increase either sets or reps by 1-2.",
+  "difficulty": "Intermediate",
+  "goal": "Build Muscle",
+  "duration_weeks": 6,
+  "days_per_week": 3,
+  "workout_days": [
+    {
+      "day": 1,
+      "exercises": [
+        {
+          "name": "Dumbbell Bench Press",
+          "muscle_group": "Chest",
+          "equipment": "Dumbbell",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 4,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 1
+        },
+        {
+          "name": "Incline Dumbbell Bench Press",
+          "muscle_group": "Chest",
+          "equipment": "Dumbbell",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 3,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 2
+        },
+        {
+          "name": "Dumbbell Flys",
+          "muscle_group": "Chest",
+          "equipment": "Dumbbell",
+          "difficulty": "Beginner",
+          "type": "Strength",
+          "sets": 3,
+          "reps": 12,
+          "rest_time": 75,
+          "order": 3
+        },
+        {
+          "name": "Push Up",
+          "muscle_group": "Chest",
+          "equipment": "Bodyweight",
+          "difficulty": "Beginner",
+          "type": "Activation",
+          "sets": 3,
+          "reps": 15,
+          "rest_time": 60,
+          "order": 4
+        },
+        {
+          "name": "Close Grip Push Up",
+          "muscle_group": "Triceps",
+          "equipment": "Bodyweight",
+          "difficulty": "Beginner",
+          "type": "Activation",
+          "sets": 3,
+          "reps": 12,
+          "rest_time": 60,
+          "order": 5
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "exercises": [
+        {
+          "name": "Lat Pull Down",
+          "muscle_group": "Back",
+          "equipment": "Machine",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 4,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 1
+        },
+        {
+          "name": "Wide Grip Lat Pull Down",
+          "muscle_group": "Back",
+          "equipment": "Machine",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 4,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 2
+        },
+        {
+          "name": "Chin Up",
+          "muscle_group": "Back",
+          "equipment": "Bodyweight",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 3,
+          "reps": 8,
+          "rest_time": 60,
+          "order": 3
+        },
+        {
+          "name": "Cable Face Pull",
+          "muscle_group": "Shoulders",
+          "equipment": "Cable",
+          "difficulty": "Intermediate",
+          "type": "SMR",
+          "sets": 3,
+          "reps": 12,
+          "rest_time": 60,
+          "order": 4
+        },
+        {
+          "name": "Standing Dumbbell Curl",
+          "muscle_group": "Biceps",
+          "equipment": "Dumbbell",
+          "difficulty": "Beginner",
+          "type": "Strength",
+          "sets": 3,
+          "reps": 10,
+          "rest_time": 60,
+          "order": 5
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "exercises": [
+        {
+          "name": "Lat Pull Down",
+          "muscle_group": "Back",
+          "equipment": "Machine",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 4,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 1
+        },
+        {
+          "name": "Wide Grip Lat Pull Down",
+          "muscle_group": "Back",
+          "equipment": "Machine",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 4,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 2
+        },
+        {
+          "name": "Dumbbell Bench Press",
+          "muscle_group": "Chest",
+          "equipment": "Dumbbell",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 4,
+          "reps": 10,
+          "rest_time": 90,
+          "order": 3
+        },
+        {
+          "name": "Dumbbell Lateral Raise",
+          "muscle_group": "Shoulders",
+          "equipment": "Dumbbell",
+          "difficulty": "Beginner",
+          "type": "Strength",
+          "sets": 3,
+          "reps": 12,
+          "rest_time": 60,
+          "order": 4
+        },
+        {
+          "name": "Cable Crunch",
+          "muscle_group": "Abs",
+          "equipment": "Cable",
+          "difficulty": "Beginner",
+          "type": "Activation",
+          "sets": 3,
+          "reps": 12,
+          "rest_time": 60,
+          "order": 5
+        }
+      ]
+    }
+  ]
+}
