@@ -1,0 +1,28 @@
+name: 3-Day Hypertrophy Plan (No Barbell) - Muscle Gain
+description: "An 8-week hypertrophy plan focused on muscle gain using dumbbells, machines, and cables. No barbell exercises. 3 workout days per week with 5 exercises per day."
+difficulty: Intermediate
+goal: Build Muscle
+duration_weeks: 8
+days_per_week: 3
+workout_days[3]:
+  - day: 1
+    exercises[5,]{name,muscle_group,equipment,difficulty,type,sets,reps,rest_time,order}:
+      Dumbbell Bench Press,Chest,Dumbbell,Intermediate,Strength,4,10,90,1
+      Incline Dumbbell Bench Press,Chest,Dumbbell,Intermediate,Strength,3,10,90,2
+      Seated Dumbbell Press,Shoulders,Dumbbell,Intermediate,Strength,3,10,90,3
+      Cable Chest Press,Chest,Cable,Intermediate,Strength,3,12,60,4
+      Rope Tricep Extension,Triceps,Rope,Intermediate,Strength,3,12,60,5
+  - day: 2
+    exercises[5,]{name,muscle_group,equipment,difficulty,type,sets,reps,rest_time,order}:
+      Lat Pull Down,Back,Machine,Intermediate,Strength,4,10,90,1
+      Close Grip Lat Pull Down,Back,Cable,Intermediate,Strength,3,10,90,2
+      Archer Pull Up,Back,Bodyweight,Advanced,Strength,3,8,90,3
+      Rope Straight Arm Pull Down,Back,Rope,Intermediate,Strength,3,12,60,4
+      Standing Dumbbell Curl,Biceps,Dumbbell,Intermediate,Strength,3,12,60,5
+  - day: 3
+    exercises[5,]{name,muscle_group,equipment,difficulty,type,sets,reps,rest_time,order}:
+      45 Degree Leg Press Calf Raise,Legs,Machine,Intermediate,Strength,4,12,90,1
+      Deep Squat Prying,Legs,Bodyweight,Beginner,Activation,3,12,60,2
+      Hip Abduction Machine,Legs,Machine,Intermediate,Strength,3,15,60,3
+      Hip Adduction Machine,Legs,Machine,Intermediate,Strength,3,15,60,4
+      Alternating Lateral Lunge with Overhead Reach,Legs,Dumbbell,Intermediate,Plyometrics,3,10,90,5

@@ -1,5 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
+import os
+
 
 from rich import print
 import json
@@ -10,6 +12,10 @@ from models import Workout
 if __name__ == "__main__":
 
     from langchain.chat_models import init_chat_model
+
+    # Ensure you have set the OPENAI_API_KEY environment variable for init_chat_model
+    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+    assert os.getenv("OPENAI_API_KEY"), "Please set the OPENAI_API_KEY environment variable."
 
     model = init_chat_model(
         model="openai:gpt-5-nano", # or another model
