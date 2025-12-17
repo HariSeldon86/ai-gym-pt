@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        timestamps()
+    }
+    
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    sh 'docker build -f jenkins/Dockerfile -t ${JOB_NAME}:${BUILD_NUMBER} .'
+                    sh 'docker tag ${JOB_NAME}:${BUILD_NUMBER} ${JOB_NAME}:latest'
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                script {
+                    sh 'docker run --rm ${JOB_NAME}:${BUILD_NUMBER}'
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
