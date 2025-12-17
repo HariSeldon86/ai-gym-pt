@@ -1,6 +1,6 @@
 {
-  "name": "3-Day Hypertrophy Plan (No Barbell) - Muscle Gain",
-  "description": "An 8-week hypertrophy plan focused on muscle gain using dumbbells, machines, and cables. No barbell exercises. 3 workout days per week with 5 exercises per day.",
+  "name": "3-Day Hypertrophy Muscle Gain Plan (No Barbell, Full Gym Equipment)",
+  "description": "A 3-day-per-week hypertrophy plan focused on muscle gain using non-barbell exercises where possible, leveraging a wide range of gym equipment (dumbbells, cables, machines, bodyweight). Each day includes 5 exercises with sets, reps, and rest times.",
   "difficulty": "Intermediate",
   "goal": "Build Muscle",
   "duration_weeks": 8,
@@ -10,7 +10,7 @@
       "day": 1,
       "exercises": [
         {
-          "name": "Dumbbell Bench Press",
+          "name": "Incline Dumbbell Bench Press",
           "muscle_group": "Chest",
           "equipment": "Dumbbell",
           "difficulty": "Intermediate",
@@ -21,18 +21,18 @@
           "order": 1
         },
         {
-          "name": "Incline Dumbbell Bench Press",
+          "name": "Dumbbell Bench Press",
           "muscle_group": "Chest",
           "equipment": "Dumbbell",
           "difficulty": "Intermediate",
           "type": "Strength",
-          "sets": 3,
+          "sets": 4,
           "reps": 10,
           "rest_time": 90,
           "order": 2
         },
         {
-          "name": "Seated Dumbbell Press",
+          "name": "Standing Dumbbell Shoulder Press",
           "muscle_group": "Shoulders",
           "equipment": "Dumbbell",
           "difficulty": "Intermediate",
@@ -54,9 +54,9 @@
           "order": 4
         },
         {
-          "name": "Rope Tricep Extension",
+          "name": "Tricep Dip",
           "muscle_group": "Triceps",
-          "equipment": "Rope",
+          "equipment": "Bodyweight",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
@@ -72,7 +72,7 @@
         {
           "name": "Lat Pull Down",
           "muscle_group": "Back",
-          "equipment": "Machine",
+          "equipment": "Cable",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 4,
@@ -81,7 +81,7 @@
           "order": 1
         },
         {
-          "name": "Close Grip Lat Pull Down",
+          "name": "Shotgun Row",
           "muscle_group": "Back",
           "equipment": "Cable",
           "difficulty": "Intermediate",
@@ -92,29 +92,29 @@
           "order": 2
         },
         {
-          "name": "Archer Pull Up",
+          "name": "Thibaudeau Kayak Row",
           "muscle_group": "Back",
-          "equipment": "Bodyweight",
-          "difficulty": "Advanced",
+          "equipment": "Cable",
+          "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 8,
+          "reps": 10,
           "rest_time": 90,
           "order": 3
         },
         {
-          "name": "Rope Straight Arm Pull Down",
-          "muscle_group": "Back",
-          "equipment": "Rope",
+          "name": "Standing Dumbbell Curl",
+          "muscle_group": "Biceps",
+          "equipment": "Dumbbell",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 12,
+          "reps": 10,
           "rest_time": 60,
           "order": 4
         },
         {
-          "name": "Standing Dumbbell Curl",
+          "name": "Concentration Curl",
           "muscle_group": "Biceps",
           "equipment": "Dumbbell",
           "difficulty": "Intermediate",
@@ -136,20 +136,9 @@
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 4,
-          "reps": 12,
+          "reps": 10,
           "rest_time": 90,
           "order": 1
-        },
-        {
-          "name": "Deep Squat Prying",
-          "muscle_group": "Legs",
-          "equipment": "Bodyweight",
-          "difficulty": "Beginner",
-          "type": "Activation",
-          "sets": 3,
-          "reps": 12,
-          "rest_time": 60,
-          "order": 2
         },
         {
           "name": "Hip Abduction Machine",
@@ -158,30 +147,41 @@
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 15,
+          "reps": 12,
+          "rest_time": 60,
+          "order": 2
+        },
+        {
+          "name": "Cable Hip Adduction",
+          "muscle_group": "Legs",
+          "equipment": "Cable",
+          "difficulty": "Intermediate",
+          "type": "Strength",
+          "sets": 3,
+          "reps": 12,
           "rest_time": 60,
           "order": 3
         },
         {
-          "name": "Hip Adduction Machine",
-          "muscle_group": "Legs",
-          "equipment": "Machine",
+          "name": "Lying Floor Leg Raise",
+          "muscle_group": "Abs",
+          "equipment": "Bodyweight",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 15,
+          "reps": 12,
           "rest_time": 60,
           "order": 4
         },
         {
-          "name": "Alternating Lateral Lunge with Overhead Reach",
-          "muscle_group": "Legs",
-          "equipment": "Dumbbell",
+          "name": "Plank",
+          "muscle_group": "Abs",
+          "equipment": "Bodyweight",
           "difficulty": "Intermediate",
-          "type": "Plyometrics",
+          "type": "Strength",
           "sets": 3,
-          "reps": 10,
-          "rest_time": 90,
+          "reps": 60,
+          "rest_time": 60,
           "order": 5
         }
       ]

@@ -17,9 +17,13 @@ pipeline {
         }
         
         stage('Test') {
+            // environment {
+            //     // This looks up the ID 'openai-key' in Jenkins Credentials
+            //     OPENAI_API_KEY = credentials('openai-key') 
+            // }
             steps {
                 script {
-                    sh 'docker run --rm ${JOB_NAME}:${BUILD_NUMBER}'
+                    sh 'docker run --rm -e OPENAI_API_KEY=${OPENAI_API_KEY} ${JOB_NAME}:${BUILD_NUMBER}'
                 }
             }
         }
