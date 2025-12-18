@@ -13,13 +13,13 @@ pipeline {
                     sh 'docker build -f jenkins/Dockerfile -t $JOB_NAME:$BUILD_NUMBER .'
                     sh 'docker tag $JOB_NAME:$BUILD_NUMBER $JOB_NAME:latest'
 
-                // // Alternatively, login to registry and build/push image. Replace the registry URL and
-                // // credential ID with your own (credentials managed via Jenkins CasC).
-                // docker.withRegistry('https://my.registry.example', 'docker-creds') {
-                //     def img = docker.build("${env.JOB_NAME}:${env.BUILD_NUMBER}", "-f jenkins/Dockerfile .")
-                //     img.push()
-                //     img.push('latest')
-                // }
+                    // // Alternatively, login to registry and build/push image. Replace the registry URL and
+                    // // credential ID with your own (credentials managed via Jenkins CasC).
+                    // docker.withRegistry('https://my.registry.example', 'docker-creds') {
+                    //     def img = docker.build("${env.JOB_NAME}:${env.BUILD_NUMBER}", "-f jenkins/Dockerfile .")
+                    //     img.push()
+                    //     img.push('latest')
+                    // }
                 }
             }
         }
@@ -31,10 +31,10 @@ pipeline {
                     string(credentialsId: 'openai-api-key', variable: 'OPENAI_API_KEY'),
                     string(credentialsId: 'google-api-key', variable: 'GOOGLE_API_KEY')
                 ]) {
-                    def String runCmd = 'docker run --rm ' +
-                                 '-e OPENAI_API_KEY=$OPENAI_API_KEY ' +
-                                 '-e GOOGLE_API_KEY=$GOOGLE_API_KEY ' +
-                                 '$JOB_NAME:$BUILD_NUMBER'
+                    def runCmd = 'docker run --rm ' +
+                        '-e OPENAI_API_KEY=$OPENAI_API_KEY ' +
+                        '-e GOOGLE_API_KEY=$GOOGLE_API_KEY ' +
+                        '$JOB_NAME:$BUILD_NUMBER'
                     sh runCmd
                 }
             }
