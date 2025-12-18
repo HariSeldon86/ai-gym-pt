@@ -23,8 +23,7 @@ pipeline {
             }
             steps {
                 script {
-                    // sh 'docker run --rm -e OPENAI_API_KEY=${OPENAI_API_KEY} ${JOB_NAME}:${BUILD_NUMBER}'
-                    sh 'docker run --rm ${JOB_NAME}:${BUILD_NUMBER}'
+                    sh 'docker run --rm -e OPENAI_API_KEY=${OPENAI_API_KEY} ${JOB_NAME}:${BUILD_NUMBER}'
                 }
             }
         }
