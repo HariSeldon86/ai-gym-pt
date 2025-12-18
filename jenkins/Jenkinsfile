@@ -10,8 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'docker build -f jenkins/Dockerfile -t $JOB_NAME:$BUILD_NUMBER .'
-                    sh 'docker tag $JOB_NAME:$BUILD_NUMBER $JOB_NAME:latest'
+                    sh 'docker build -f jenkins/Dockerfile -t ${JOB_NAME}:${BUILD_NUMBER} .'
+                    sh 'docker tag ${JOB_NAME}:${BUILD_NUMBER} ${JOB_NAME}:latest'
 
                     // // Alternatively, login to registry and build/push image. Replace the registry URL and
                     // // credential ID with your own (credentials managed via Jenkins CasC).
@@ -26,16 +26,11 @@ pipeline {
 
         stage('Test') {
             steps {
-                // Use withCredentials to scope and mask the secret during this block
-                withCredentials([
-                    string(credentialsId: 'openai-api-key', variable: 'OPENAI_API_KEY'),
-                    string(credentialsId: 'google-api-key', variable: 'GOOGLE_API_KEY')
-                ]) {
-                    def runCmd = 'docker run --rm ' +
-                        '-e OPENAI_API_KEY=$OPENAI_API_KEY ' +
-                        '-e GOOGLE_API_KEY=$GOOGLE_API_KEY ' +
-                        '$JOB_NAME:$BUILD_NUMBER'
-                    sh runCmd
+                script {
+                    // Use withCredentials to scope and mask the secret during this block
+                    withCredentials([string(credentialsId: 'openai-api-key', variable: 'OPENAI_API_KEY'), string(credentialsId: 'google-api-key', variable: 'GOOGLE_API_KEY')]) {
+                        sh 'docker run --rm -e OPENAI_API_KEY=$OPENAI_API_KEY -e GOOGLE_API_KEY=$GOOGLE_API_KEY $JOB_NAME:$BUILD_NUMBER'
+                    }
                 }
             }
         }
