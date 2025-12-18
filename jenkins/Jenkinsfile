@@ -12,18 +12,25 @@ pipeline {
                 script {
                     sh 'docker build -f jenkins/Dockerfile -t ${JOB_NAME}:${BUILD_NUMBER} .'
                     sh 'docker tag ${JOB_NAME}:${BUILD_NUMBER} ${JOB_NAME}:latest'
+
+                    // // Alternatively, login to registry and build/push image. Replace the registry URL and
+                    // // credential ID with your own (credentials managed via Jenkins CasC).
+                    // docker.withRegistry('https://my.registry.example', 'docker-creds') {
+                    //     def img = docker.build("${env.JOB_NAME}:${env.BUILD_NUMBER}", "-f jenkins/Dockerfile .")
+                    //     img.push()
+                    //     img.push('latest')
+                    // }
                 }
             }
         }
         
         stage('Test') {
-            environment {
-                // This looks up the ID 'openai-api-key' in Jenkins Credentials
-                OPENAI_API_KEY = credentials('openai-api-key') 
-            }
             steps {
                 script {
-                    sh 'docker run --rm -e OPENAI_API_KEY=${OPENAI_API_KEY} ${JOB_NAME}:${BUILD_NUMBER}'
+                    // Use withCredentials to scope and mask the secret during this block
+                    withCredentials([string(credentialsId: 'openai-api-key', variable: 'OPENAI_API_KEY')]) {
+                        sh 'docker run --rm -e OPENAI_API_KEY=$OPENAI_API_KEY $JOB_NAME:$BUILD_NUMBER'
+                    }
                 }
             }
         }
@@ -31,7 +38,8 @@ pipeline {
     
     post {
         always {
-            cleanWs()
+            // cleanWs() // needs workspace-cleanup plugin
+            deleteDir() // built-in Jenkins step
         }
     }
 }
