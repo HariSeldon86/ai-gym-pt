@@ -1,9 +1,9 @@
 {
-  "name": "3-Day Hypertrophy Muscle Gain Plan (No Barbell, Full Gym Equipment)",
-  "description": "A 3-day-per-week hypertrophy plan focused on muscle gain using non-barbell exercises where possible, leveraging a wide range of gym equipment (dumbbells, cables, machines, bodyweight). Each day includes 5 exercises with sets, reps, and rest times.",
+  "name": "Full Body Muscle Gain",
+  "description": "A 3-day per week full-body workout plan focused on muscle gain, utilizing a variety of equipment but excluding barbells.",
   "difficulty": "Intermediate",
   "goal": "Build Muscle",
-  "duration_weeks": 8,
+  "duration_weeks": 12,
   "days_per_week": 3,
   "workout_days": [
     {
@@ -17,36 +17,36 @@
           "type": "Strength",
           "sets": 4,
           "reps": 10,
-          "rest_time": 90,
+          "rest_time": 75,
           "order": 1
         },
         {
-          "name": "Dumbbell Bench Press",
-          "muscle_group": "Chest",
-          "equipment": "Dumbbell",
+          "name": "Pull Up",
+          "muscle_group": "Back",
+          "equipment": "Bodyweight",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 4,
-          "reps": 10,
-          "rest_time": 90,
+          "reps": 8,
+          "rest_time": 75,
           "order": 2
         },
         {
-          "name": "Standing Dumbbell Shoulder Press",
+          "name": "Dumbbell Lateral Raise",
           "muscle_group": "Shoulders",
           "equipment": "Dumbbell",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 10,
-          "rest_time": 90,
+          "reps": 12,
+          "rest_time": 60,
           "order": 3
         },
         {
-          "name": "Cable Chest Press",
-          "muscle_group": "Chest",
-          "equipment": "Cable",
-          "difficulty": "Intermediate",
+          "name": "Machine Bicep Curl",
+          "muscle_group": "Biceps",
+          "equipment": "Machine",
+          "difficulty": "Beginner",
           "type": "Strength",
           "sets": 3,
           "reps": 12,
@@ -54,14 +54,14 @@
           "order": 4
         },
         {
-          "name": "Tricep Dip",
-          "muscle_group": "Triceps",
-          "equipment": "Bodyweight",
-          "difficulty": "Intermediate",
+          "name": "Cable Crunch",
+          "muscle_group": "Abs",
+          "equipment": "Cable",
+          "difficulty": "Beginner",
           "type": "Strength",
           "sets": 3,
-          "reps": 12,
-          "rest_time": 60,
+          "reps": 15,
+          "rest_time": 45,
           "order": 5
         }
       ]
@@ -70,40 +70,40 @@
       "day": 2,
       "exercises": [
         {
-          "name": "Lat Pull Down",
-          "muscle_group": "Back",
-          "equipment": "Cable",
+          "name": "Dumbbell Bench Press",
+          "muscle_group": "Chest",
+          "equipment": "Dumbbell",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 4,
           "reps": 10,
-          "rest_time": 90,
+          "rest_time": 75,
           "order": 1
         },
         {
-          "name": "Shotgun Row",
+          "name": "Lat Pull Down",
           "muscle_group": "Back",
           "equipment": "Cable",
-          "difficulty": "Intermediate",
+          "difficulty": "Beginner",
           "type": "Strength",
-          "sets": 3,
+          "sets": 4,
           "reps": 10,
-          "rest_time": 90,
+          "rest_time": 75,
           "order": 2
         },
         {
-          "name": "Thibaudeau Kayak Row",
-          "muscle_group": "Back",
-          "equipment": "Cable",
+          "name": "Machine Shoulder Press",
+          "muscle_group": "Shoulders",
+          "equipment": "Machine",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
           "reps": 10,
-          "rest_time": 90,
+          "rest_time": 60,
           "order": 3
         },
         {
-          "name": "Standing Dumbbell Curl",
+          "name": "Standing Hammer Curl",
           "muscle_group": "Biceps",
           "equipment": "Dumbbell",
           "difficulty": "Intermediate",
@@ -114,14 +114,14 @@
           "order": 4
         },
         {
-          "name": "Concentration Curl",
-          "muscle_group": "Biceps",
-          "equipment": "Dumbbell",
-          "difficulty": "Intermediate",
+          "name": "Plank",
+          "muscle_group": "Abs",
+          "equipment": "Bodyweight",
+          "difficulty": "Beginner",
           "type": "Strength",
           "sets": 3,
-          "reps": 12,
-          "rest_time": 60,
+          "reps": 60,
+          "rest_time": 45,
           "order": 5
         }
       ]
@@ -130,42 +130,42 @@
       "day": 3,
       "exercises": [
         {
-          "name": "45 Degree Leg Press Calf Raise",
-          "muscle_group": "Legs",
-          "equipment": "Machine",
+          "name": "Dumbbell Flys",
+          "muscle_group": "Chest",
+          "equipment": "Dumbbell",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 4,
-          "reps": 10,
-          "rest_time": 90,
+          "reps": 12,
+          "rest_time": 75,
           "order": 1
         },
         {
-          "name": "Hip Abduction Machine",
-          "muscle_group": "Legs",
-          "equipment": "Machine",
+          "name": "Chin Up",
+          "muscle_group": "Back",
+          "equipment": "Bodyweight",
           "difficulty": "Intermediate",
           "type": "Strength",
-          "sets": 3,
-          "reps": 12,
-          "rest_time": 60,
+          "sets": 4,
+          "reps": 8,
+          "rest_time": 75,
           "order": 2
         },
         {
-          "name": "Cable Hip Adduction",
-          "muscle_group": "Legs",
+          "name": "Cable Face Pull",
+          "muscle_group": "Shoulders",
           "equipment": "Cable",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 12,
+          "reps": 15,
           "rest_time": 60,
           "order": 3
         },
         {
-          "name": "Lying Floor Leg Raise",
-          "muscle_group": "Abs",
-          "equipment": "Bodyweight",
+          "name": "Seated Dumbbell Tricep Extension",
+          "muscle_group": "Triceps",
+          "equipment": "Dumbbell",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
@@ -174,14 +174,14 @@
           "order": 4
         },
         {
-          "name": "Plank",
+          "name": "Hanging Leg Raise",
           "muscle_group": "Abs",
           "equipment": "Bodyweight",
           "difficulty": "Intermediate",
           "type": "Strength",
           "sets": 3,
-          "reps": 60,
-          "rest_time": 60,
+          "reps": 12,
+          "rest_time": 45,
           "order": 5
         }
       ]

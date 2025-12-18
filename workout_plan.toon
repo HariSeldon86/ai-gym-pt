@@ -1,28 +1,28 @@
-name: "3-Day Hypertrophy Muscle Gain Plan (No Barbell, Full Gym Equipment)"
-description: "A 3-day-per-week hypertrophy plan focused on muscle gain using non-barbell exercises where possible, leveraging a wide range of gym equipment (dumbbells, cables, machines, bodyweight). Each day includes 5 exercises with sets, reps, and rest times."
+name: Full Body Muscle Gain
+description: "A 3-day per week full-body workout plan focused on muscle gain, utilizing a variety of equipment but excluding barbells."
 difficulty: Intermediate
 goal: Build Muscle
-duration_weeks: 8
+duration_weeks: 12
 days_per_week: 3
 workout_days[3]:
   - day: 1
     exercises[5,]{name,muscle_group,equipment,difficulty,type,sets,reps,rest_time,order}:
-      Incline Dumbbell Bench Press,Chest,Dumbbell,Intermediate,Strength,4,10,90,1
-      Dumbbell Bench Press,Chest,Dumbbell,Intermediate,Strength,4,10,90,2
-      Standing Dumbbell Shoulder Press,Shoulders,Dumbbell,Intermediate,Strength,3,10,90,3
-      Cable Chest Press,Chest,Cable,Intermediate,Strength,3,12,60,4
-      Tricep Dip,Triceps,Bodyweight,Intermediate,Strength,3,12,60,5
+      Incline Dumbbell Bench Press,Chest,Dumbbell,Intermediate,Strength,4,10,75,1
+      Pull Up,Back,Bodyweight,Intermediate,Strength,4,8,75,2
+      Dumbbell Lateral Raise,Shoulders,Dumbbell,Intermediate,Strength,3,12,60,3
+      Machine Bicep Curl,Biceps,Machine,Beginner,Strength,3,12,60,4
+      Cable Crunch,Abs,Cable,Beginner,Strength,3,15,45,5
   - day: 2
     exercises[5,]{name,muscle_group,equipment,difficulty,type,sets,reps,rest_time,order}:
-      Lat Pull Down,Back,Cable,Intermediate,Strength,4,10,90,1
-      Shotgun Row,Back,Cable,Intermediate,Strength,3,10,90,2
-      Thibaudeau Kayak Row,Back,Cable,Intermediate,Strength,3,10,90,3
-      Standing Dumbbell Curl,Biceps,Dumbbell,Intermediate,Strength,3,10,60,4
-      Concentration Curl,Biceps,Dumbbell,Intermediate,Strength,3,12,60,5
+      Dumbbell Bench Press,Chest,Dumbbell,Intermediate,Strength,4,10,75,1
+      Lat Pull Down,Back,Cable,Beginner,Strength,4,10,75,2
+      Machine Shoulder Press,Shoulders,Machine,Intermediate,Strength,3,10,60,3
+      Standing Hammer Curl,Biceps,Dumbbell,Intermediate,Strength,3,10,60,4
+      Plank,Abs,Bodyweight,Beginner,Strength,3,60,45,5
   - day: 3
     exercises[5,]{name,muscle_group,equipment,difficulty,type,sets,reps,rest_time,order}:
-      45 Degree Leg Press Calf Raise,Legs,Machine,Intermediate,Strength,4,10,90,1
-      Hip Abduction Machine,Legs,Machine,Intermediate,Strength,3,12,60,2
-      Cable Hip Adduction,Legs,Cable,Intermediate,Strength,3,12,60,3
-      Lying Floor Leg Raise,Abs,Bodyweight,Intermediate,Strength,3,12,60,4
-      Plank,Abs,Bodyweight,Intermediate,Strength,3,60,60,5
+      Dumbbell Flys,Chest,Dumbbell,Intermediate,Strength,4,12,75,1
+      Chin Up,Back,Bodyweight,Intermediate,Strength,4,8,75,2
+      Cable Face Pull,Shoulders,Cable,Intermediate,Strength,3,15,60,3
+      Seated Dumbbell Tricep Extension,Triceps,Dumbbell,Intermediate,Strength,3,12,60,4
+      Hanging Leg Raise,Abs,Bodyweight,Intermediate,Strength,3,12,45,5
