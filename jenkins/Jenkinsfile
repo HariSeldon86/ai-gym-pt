@@ -27,16 +27,17 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    // Create output directory for artifacts
-                    sh 'mkdir -p ${WORKSPACE}/output'
-                    
                     // Use withCredentials to scope and mask the secret during this block
                     withCredentials([string(credentialsId: 'openai-api-key', variable: 'OPENAI_API_KEY'), string(credentialsId: 'google-api-key', variable: 'GOOGLE_API_KEY')]) {
-                        // Run container and mount output directory to copy output files
-                        sh 'docker run --rm -e OPENAI_API_KEY=$OPENAI_API_KEY -e GOOGLE_API_KEY=$GOOGLE_API_KEY -v ${WORKSPACE}/output:/app/output $JOB_NAME:$BUILD_NUMBER'
-
-                        // DEBUG line
-                        sh 'ls -R ${WORKSPACE}'
+                        // Run container with a name so we can copy files from it later
+                        sh 'docker run --name workout-container-${BUILD_NUMBER} -e OPENAI_API_KEY=$OPENAI_API_KEY -e GOOGLE_API_KEY=$GOOGLE_API_KEY $JOB_NAME:$BUILD_NUMBER'
+                        
+                        // Copy output files from container directly to the Jenkins workspace root
+                        sh 'docker cp workout-container-${BUILD_NUMBER}:/app/workout_plan.json . || true'
+                        sh 'docker cp workout-container-${BUILD_NUMBER}:/app/workout_plan.toon . || true'
+                        
+                        // Clean up the container
+                        sh 'docker rm workout-container-${BUILD_NUMBER}'
                     }
                 }
             }
@@ -45,8 +46,8 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
                 script {
-                    // Archive the output files as Jenkins artifacts
-                    archiveArtifacts artifacts: 'output/*.json, output/*.toon', 
+                    // Archive the output files from the workspace root
+                    archiveArtifacts artifacts: 'workout_plan.json, workout_plan.toon', 
                                      allowEmptyArchive: true,
                                      fingerprint: true
                 }

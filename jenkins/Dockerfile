@@ -6,16 +6,10 @@ WORKDIR /app
 RUN pip install --no-cache-dir uv
 
 # Copy project files
-COPY pyproject.toml uv.lock* ./
 COPY . .
 
-# Install dependencies using lock file
-RUN uv sync --locked
-
-# Create output directory and copy run script
-RUN mkdir -p /app/output
-COPY jenkins/run.sh /app/run.sh
-RUN chmod +x /app/run.sh
+# Install dependencies and make run script executable
+RUN uv sync --locked && chmod +x jenkins/run.sh
 
 # Run the application
-ENTRYPOINT ["/app/run.sh"]
+ENTRYPOINT ["/app/jenkins/run.sh"]
