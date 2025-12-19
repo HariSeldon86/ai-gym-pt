@@ -14,3 +14,7 @@ wheels/
 
 # IDE settings
 .vscode/
+
+# output files
+workout_plan.json
+workout_plan.toon
