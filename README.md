@@ -39,10 +39,10 @@ uv run main.py
 **Files & responsibilities**
 - `main.py`: Entrypoint and demo runner.
 	- Invokes the LLM through LangChain 1.0 and the configured structured output parser to create a `Workout` object.
-	- Performs any local post-processing and writes the produced object to `JSON` and `TOON` files (example exports: `workout_plan.json`, `workout_plan.toon`).
+	- Performs any local post-processing and writes the produced object to `JSON` and `TOON` files (example exports: `example_workout_plan.json`, `example_workout_plan.toon`).
 - `models.py`: Contains the `pydantic` models for the structured `Workout` output and any nested submodels (exercises, sets, metadata).
 - `data_models.py`: Defines the smaller data field models used within `Workout`.
-- `workout_plan.json` / `workout_plan.toon`: Example exports created by `main.py` to illustrate the output formats.
+- `example_workout_plan.json` / `example_workout_plan.toon`: Example exports created by `main.py` to illustrate the output formats.
 - `uv.lock` / `pyproject.toml`: Dependency metadata and installation manifest.
 
 ---

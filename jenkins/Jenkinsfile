@@ -27,10 +27,16 @@ pipeline {
         stage('Test') {
             steps {
                 script {
+                    // Create output directory for artifacts
+                    sh 'mkdir -p ${WORKSPACE}/output'
+                    
                     // Use withCredentials to scope and mask the secret during this block
                     withCredentials([string(credentialsId: 'openai-api-key', variable: 'OPENAI_API_KEY'), string(credentialsId: 'google-api-key', variable: 'GOOGLE_API_KEY')]) {
-                        // Run container and mount current directory to copy output files
+                        // Run container and mount output directory to copy output files
                         sh 'docker run --rm -e OPENAI_API_KEY=$OPENAI_API_KEY -e GOOGLE_API_KEY=$GOOGLE_API_KEY -v ${WORKSPACE}/output:/app/output $JOB_NAME:$BUILD_NUMBER'
+
+                        // DEBUG line
+                        sh 'ls -R ${WORKSPACE}'
                     }
                 }
             }
