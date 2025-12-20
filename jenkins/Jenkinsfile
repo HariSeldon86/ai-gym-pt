@@ -57,8 +57,8 @@ pipeline {
 
     post {
         always {
-            // cleanWs() // needs workspace-cleanup plugin
-            deleteDir() // built-in Jenkins step
+            cleanWs() // needs workspace-cleanup plugin
+            // deleteDir() // built-in Jenkins step
         }
     }
 }
